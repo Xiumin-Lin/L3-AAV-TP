@@ -12,17 +12,12 @@ typedef struct cel {
 	struct cel *next_cel;
 } Cellule;
 
-typedef struct {
-	Cellule *first;
-	Cellule *last;
-} Liste;
-
 /**
  * Create a new cell and fill the cell's fields with the point "p".
  * @param p 	- the point to be stored in the cell.
  * @return 		a new cell with the point "p" in it.
  */
-Cellule *NouvelCel(Point p);
+Cellule *NouvCel(Point p);
 
 /**
  * Insert the cell "cel" after the place "pl" in the list "list".
@@ -34,10 +29,10 @@ void InsererCellule(int pl, Cellule *cel, Cellule *liste);
 
 /**
  * Delete the cell at position "pl" in the "list" list.
- * @param pl 	- the position of the cell to be deleted.
- * @param liste - the cell list.
+ * @param pl 		- the position of the cell to be deleted.
+ * @param p_list 	- the cell list.
  */
-void SupprimerCellule(int pl, Cellule *liste);
+void SupprimerCellule(int pl, Cellule **p_list);
 
 /**
  * Display the list of cells.
