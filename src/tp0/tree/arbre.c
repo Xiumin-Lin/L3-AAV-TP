@@ -1,5 +1,5 @@
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include "arbre.h"
 
 Noeud *NouvNoeud(char carac) {

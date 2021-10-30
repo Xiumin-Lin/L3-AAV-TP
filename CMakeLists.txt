@@ -5,6 +5,8 @@ set(CMAKE_C_STANDARD 99)
 
 add_executable(
         TP_AlgoAv
-#        src/list/maListe.c src/list/liste.c src/list/liste.h
-        src/tree/monArbre.c src/tree/arbre.c src/tree/arbre.h
-        )
+#        src/tp0/list/maListe.c src/tp0/list/liste.c src/tp0/list/liste.h
+#        src/tp0/tree/monArbre.c src/tp0/tree/arbre.c src/tp0/tree/arbre.h
+        src/tp1/graph/monGraphe.c src/tp1/graph/graphe.c src/tp1/graph/graphe.h
+        src/tp2/fifo/fifo.c src/tp2/fifo/fifo.h
+)

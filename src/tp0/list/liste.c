@@ -1,5 +1,5 @@
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include "liste.h"
 
 Cellule *NouvCel(Point p) {
