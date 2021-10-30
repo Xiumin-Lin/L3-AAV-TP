@@ -32,10 +32,8 @@ void InsererNoeudFG(Noeud *ptr_n, ArbreBinaire tree, int node_num) {
 	}
 	Noeud *node_to_find = RechercheNoeud(tree, node_num);
 	if(node_to_find != NULL) {
-		if(node_to_find->n_left != NULL) {
-			ptr_n->n_left = node_to_find->n_left;
-			node_to_find->n_left = ptr_n;
-		} else node_to_find->n_left = ptr_n;
+		ptr_n->n_left = node_to_find->n_left;
+		node_to_find->n_left = ptr_n;
 	} else printf("Failure of insertion : node num = %d not found. \n", node_num);
 }
 
@@ -53,9 +51,7 @@ void InsererNoeudFD(Noeud *ptr_n, ArbreBinaire tree, int node_num) {
 	}
 	Noeud *node_to_find = RechercheNoeud(tree, node_num);
 	if(node_to_find != NULL) {
-		if(node_to_find->n_right != NULL) {
-			ptr_n->n_right = node_to_find->n_right;
-			node_to_find->n_right = ptr_n;
-		} else node_to_find->n_right = ptr_n;
+		ptr_n->n_right = node_to_find->n_right;
+		node_to_find->n_right = ptr_n;
 	} else printf("Failure of insertion : node num = %d not found. \n", node_num);
 }
