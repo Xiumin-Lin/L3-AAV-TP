@@ -2,11 +2,21 @@
 #include <stdlib.h>
 #include "liste.h"
 
-Cellule *NouvCel(Point p) {
+Cellule *NouvCel(Point *p) {
 
 	Cellule *cel = malloc(sizeof(Cellule));
 	if(cel != NULL) {
-		cel->pt = p;
+		cel->data = p;
+		cel->prev_cel = NULL;
+		cel->next_cel = NULL;
+	}
+	return cel;
+}
+
+Cellule *NouvCelGenerique(void *v){
+	Cellule *cel = malloc(sizeof(Cellule));
+	if(cel != NULL) {
+		cel->data = v;
 		cel->prev_cel = NULL;
 		cel->next_cel = NULL;
 	}
@@ -73,7 +83,7 @@ void Afficher(Cellule *liste) {
 	Cellule *current_cel = liste;
 	int counter = 1;
 	do {
-		printf("Cellule %d : (%d,%d);\n", counter, current_cel->pt.x, current_cel->pt.y);
+		printf("Cellule %d : (%d,%d);\n", counter, (*(Point*)(current_cel->data)).x, (*(Point*)(current_cel->data)).y);
 		current_cel = current_cel->next_cel;
 		counter++;
 	} while(current_cel != NULL);

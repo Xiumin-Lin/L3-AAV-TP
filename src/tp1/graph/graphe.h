@@ -21,6 +21,4 @@ Matrice chargeGrapheAuto(int ordre);
 
 void libereGraphe(Matrice adjacence, int ordre);
 
-void plusCourtChemin(Matrice adjacence, int ordre, int s, int *l, int *pred);
-
 #endif //TP_ALGOAV_GRAPHE_H

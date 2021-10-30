@@ -7,6 +7,8 @@ add_executable(
         TP_AlgoAv
 #        src/tp0/list/maListe.c src/tp0/list/liste.c src/tp0/list/liste.h
 #        src/tp0/tree/monArbre.c src/tp0/tree/arbre.c src/tp0/tree/arbre.h
-        src/tp1/graph/monGraphe.c src/tp1/graph/graphe.c src/tp1/graph/graphe.h
-        src/tp2/fifo/fifo.c src/tp2/fifo/fifo.h
-)
+#        src/tp1/graph/monGraphe.c src/tp1/graph/graphe.c src/tp1/graph/graphe.h
+        src/tp2/main.c src/tp2/fifo/fifo.c src/tp2/fifo/fifo.h
+        src/tp1/graph/graphe.c src/tp1/graph/graphe.h
+        src/tp0/list/liste.c src/tp0/list/liste.h
+        )

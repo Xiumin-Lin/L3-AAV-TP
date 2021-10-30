@@ -8,10 +8,10 @@ int main() {
 	Point p2 = {1, 1};
 	Point p3 = {1, -1};
 	Point p4 = {-1, -1};
-	Cellule *liste = NouvCel(p1);
-	Cellule *cell2 = NouvCel(p2);
-	Cellule *cell3 = NouvCel(p3);
-	Cellule *cell4 = NouvCel(p4);
+	Cellule *liste = NouvCel(&p1);
+	Cellule *cell2 = NouvCel(&p2);
+	Cellule *cell3 = NouvCel(&p3);
+	Cellule *cell4 = NouvCel(&p4);
 	if(liste != NULL && cell2 != NULL && cell3 != NULL && cell4 != NULL) {
 		InsererCellule(1, cell2, liste);
 		InsererCellule(2, cell3, liste);

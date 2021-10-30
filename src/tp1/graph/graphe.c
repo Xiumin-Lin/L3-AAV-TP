@@ -73,11 +73,13 @@ Matrice chargeGraphe(int ordre) {
 			return NULL;
 	}
 
+	// Affiche la matrice
+	printf("Matrice adjacence : \n");
 	for(int i = 0; i < ordre; ++i) {
 		for(int j = 0; j < ordre; ++j) {
 			printf("%d ", matriceAdj[i][j]);
 		}
-		printf("\n");
+		printf("\n\n");
 	}
 	return matriceAdj;
 }
@@ -127,8 +129,4 @@ void libereGraphe(Matrice adjacence, int ordre) {
 		free(adjacence[i]);
 	}
 	free(adjacence);
-};
-
-void plusCourtChemin(Matrice adjacence, int ordre, int s, int *l, int *pred) {
-
 };

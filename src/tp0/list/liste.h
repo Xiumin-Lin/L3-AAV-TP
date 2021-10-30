@@ -7,7 +7,7 @@ typedef struct {
 } Point;
 
 typedef struct cel {
-	Point pt;
+	void *data;
 	struct cel *prev_cel;
 	struct cel *next_cel;
 } Cellule;
@@ -17,7 +17,14 @@ typedef struct cel {
  * @param p 	- the point to be stored in the cell.
  * @return 		a new cell with the point "p" in it.
  */
-Cellule *NouvCel(Point p);
+Cellule *NouvCel(Point *p);
+
+/**
+ * Create a new cell and fill the cell's fields with generique value.
+ * @param v 	- the value to be stored in the cell.
+ * @return 		a new cell with the value "v" in it.
+ */
+Cellule *NouvCelGenerique(void *v);
 
 /**
  * Insert the cell "cel" after the place "pl" in the list "list".
