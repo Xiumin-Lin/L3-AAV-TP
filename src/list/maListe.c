@@ -2,8 +2,8 @@
 #include "liste.h"
 
 int main() {
-	printf("Hello, World!\n");
-	// TP11 Prog Imperative
+	printf("Hello, World! TEST LISTE\n");
+	// TP11 L2 Prog Imperative
 	Point p1 = {-1, 1};
 	Point p2 = {1, 1};
 	Point p3 = {1, -1};
