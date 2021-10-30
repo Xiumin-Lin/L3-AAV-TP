@@ -15,7 +15,7 @@ int main() {
 
 	if(matriceAdj != NULL) {
 		int ref = 0;
-		printf("Entrer le numero du sommet de ref :");
+		printf("Entrer le numero du sommet de ref (le 1er sommet a pour num 0) :");
 		scanf_s("%d", &ref);
 		marquerVoisin(matriceAdj, ordre, ref);
 	}
