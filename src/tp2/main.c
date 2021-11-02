@@ -13,9 +13,7 @@
  */
 void plusCourtChemin(Matrice adjacence, int ordre, int s, int *l, int *pred);
 
-void AfficheTableau(int tab[], int ordre);
-
-void ShowFifo(Fifo *f);
+void AfficheTableau(const int tab[], int ordre);
 
 int main() {
 	printf("Hello, World! TEST GRAPHE\n");
@@ -70,7 +68,6 @@ void plusCourtChemin(Matrice adjacence, int ordre, int s, int *l, int *pred) {
 					int *ptr_y = malloc(sizeof(int));
 					*ptr_y = y;
 					AddCellInFifo(ptr_y, f);
-//					ShowFifo(f);
 					pred[y] = x;  // x est le prédécesseur de y
 					l[y] = l[x] + 1; // incrémenter la longueur de y
 				}
@@ -87,21 +84,10 @@ void plusCourtChemin(Matrice adjacence, int ordre, int s, int *l, int *pred) {
 	AfficheTableau(pred, ordre);
 }
 
-void AfficheTableau(int tab[], int ordre) {
+void AfficheTableau(const int tab[], int ordre) {
 	printf("[");
 	for(int i = 0; i < ordre; ++i) {
 		printf(" %d,", tab[i]);
 	}
 	printf("]\n");
-}
-
-void ShowFifo(Fifo *f) {
-	MoveToFirst(f);
-	if(f != NULL) {
-		while(*f != NULL) {
-			printf("\n%d > ", *(int *)((*f)->data));
-			MoveToNext(f);
-		}
-	}
-	MoveToFirst(f);
 }
