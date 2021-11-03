@@ -1,5 +1,6 @@
 #ifndef TP_ALGOAV_PRIM_H
 #define TP_ALGOAV_PRIM_H
+
 #define INFINI 1000.0 // un poids reel superieur à la plus grande longueur totale
 
 typedef struct {
