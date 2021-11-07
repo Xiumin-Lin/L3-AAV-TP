@@ -3,6 +3,7 @@
 #include "prim.h"
 
 int main() {
+	printf("Hello, World! TEST ALGO DE PRIM\n");
 	int ordre = 8;
 	MatriceFloat adj_poids = malloc(ordre * sizeof(float *));
 	if(adj_poids == NULL) exit(0);

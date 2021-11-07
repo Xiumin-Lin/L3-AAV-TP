@@ -7,9 +7,9 @@ typedef Cellule *Fifo;
 
 Fifo *NouvFifo(int *val);
 
-void AddCellInFifo(void *data, Fifo *f);
+void AddToFirstInFifo(void *data, Fifo *f);
 
-void *PopFirst(Fifo *f);
+void *PopLast(Fifo *f);
 
 void MoveToFirst(Fifo *f);
 

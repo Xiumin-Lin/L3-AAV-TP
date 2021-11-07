@@ -10,7 +10,7 @@ Fifo *NouvFifo(int *val) {
 	return f;
 }
 
-void AddCellInFifo(void *data, Fifo *f) {
+void AddToFirstInFifo(void *data, Fifo *f) {
 	if(f == NULL) return;
 	Cellule *new_cell = NouvCelGenerique(data);
 	if(new_cell == NULL) {
@@ -25,7 +25,7 @@ void AddCellInFifo(void *data, Fifo *f) {
 	*f = new_cell;
 }
 
-void *PopFirst(Fifo *f) {
+void *PopLast(Fifo *f) {
 	void *ret = NULL;
 	if(f != NULL && *f != NULL) {
 		Cellule *future_last_cell = NULL;

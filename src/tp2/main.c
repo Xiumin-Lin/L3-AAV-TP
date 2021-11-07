@@ -16,7 +16,7 @@ void plusCourtChemin(Matrice adjacence, int ordre, int s, int *l, int *pred);
 void AfficheTableau(const int tab[], int ordre);
 
 int main() {
-	printf("Hello, World! TEST GRAPHE\n");
+	printf("Hello, World! TEST FIFO\n");
 	int ordre = 6;
 	Matrice matriceAdj = chargeGrapheAuto(ordre);
 
@@ -58,16 +58,16 @@ void plusCourtChemin(Matrice adjacence, int ordre, int s, int *l, int *pred) {
 	f = NouvFifo(&s);
 	if(f != NULL) {
 		while(*f != NULL) {
-			int x = *(int*) PopFirst(f); //  Defiler le 1er sommet de la file f
+			int x = *(int*) PopLast(f); //  Defiler le dernier sommet de la file f
 			for(int y = 0; y < ordre; ++y) {
 				printf("x = %d, y = %d", x, y); // Debug
 				if(adjacence[x][y] && !marques[y]) {
 					marques[y] = 1;
 					printf(", Marque y = %d", y);
-					// enfiler le sommet y à la fin de f
+					// enfiler le sommet y au debut de f
 					int *ptr_y = malloc(sizeof(int));
 					*ptr_y = y;
-					AddCellInFifo(ptr_y, f);
+					AddToFirstInFifo(ptr_y, f);
 					pred[y] = x;  // x est le prédécesseur de y
 					l[y] = l[x] + 1; // incrémenter la longueur de y
 				}

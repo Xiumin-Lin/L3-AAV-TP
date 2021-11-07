@@ -12,5 +12,6 @@ add_executable(
 #        src/tp2/main.c src/tp2/fifo/fifo.c src/tp2/fifo/fifo.h
 #        src/tp1/graph/graphe.c src/tp1/graph/graphe.h
 #        src/tp0/list/liste.c src/tp0/list/liste.h
-        src/tp4/testPrim.c src/tp4/prim.c src/tp4/prim.h
-        )
+
+#        src/tp4/testPrim.c src/tp4/prim.c src/tp4/prim.h
+        src/tp5/main.c)
